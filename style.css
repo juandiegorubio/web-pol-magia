@@ -192,40 +192,37 @@ header nav ul {
   z-index: 10;
 }
 #qui-soc {
-  grid-column: span 4;
+  grid-column: span 3;
   &>img {
-    width: 150%;
+    height: 100%;
   }
 }
 #magia-prop {
-  grid-column: span 6;
+  grid-column: span 7;
   &>img {
     width: 110%;
   }
 }
 #magia-tothom {
-  grid-column: span 6;
-  width: 100%;
+  grid-column: span 5;
   &>img {
     width: 110%;
   }
 }
 #password {
-  grid-column: span 4;
-  width: 100%;
+  grid-column: span 5;
   &>img {
     width: 180%;
   }
 }
 #disseny-personalitzat {
-  grid-column: span 5;
-  width: 100%;
+  grid-column: span 7;
   &>img {
-    height: 120%;
+    width: 110%;
   }
 }
 #altres {
-  grid-column: span 5;
+  grid-column: span 3;
   background-color: #e4cb86;
 }
 
