@@ -7,24 +7,66 @@
   <title>Màgia - Pol Pavo</title>
 </head>
 <body>
-  <header>
-    <div id="logo">
-      <a href="#">
-        <img src="images/logo.png" alt="Logo de Pol Pavo">
-      </a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#">Inici</a></li>
-        <li><a href="#">Espectacles</a></li>
-        <li><a href="#">Contacte</a></li>
-      </ul>
-    </nav>
-  </header>
   <main>
-    <div id="background-img">
-      <img src="images/premis-magicus.png" alt="Background image">
-    </div>
+    <section id="intro">
+      <header>
+        <h1>Màgia - Pol Pavo</h1>
+        <ol>
+          <li><p>Mag</p></li>
+          <li><p>Enginyer</p></li>
+          <li><p>Ilusionista</p></li>
+        </ol>
+      </header>
+      <div id="background-img">
+        <img src="images/premis-magicus.png" alt="Background image">
+      </div>
+    </section>
+    <section id="main-content">
+      <div class="wrapper">
+        <button class="select-info" id="qui-soc">
+          <h3>Qui Soc?</h3>
+          <img src="images/qui-soc.jpg" alt="Qui Soc">
+        </button>
+        <button class="select-info" id="magia-prop">
+          <h3>Magia de Prop!</h3>
+          <img src="images/magia-de-prop.jpeg" alt="Magia de prop">
+        </button>
+        <button class="select-info" id="magia-tothom">
+          <h3>Magia per a Tothom</h3>
+          <img src="images/magia-per-a-tothom.jpg" alt="Magia per a tothom">
+        </button>
+        <button class="select-info" id="password">
+          <h3>P@ssW0rd!</h3>
+          <img src="images/password.jpeg" alt="P@ssW0rd!">
+        </button>
+        <button class="select-info" id="disseny-personalitzat">
+          <h3>Disseny Personalitzat</h3>
+          <img src="images/diseny-personalitzat.jpg" alt="Disseny Personalitzat">
+        </button>
+        <button class="select-info" id="altres">
+          <h3>Altres</h3>
+          <img src="images/logo.png" alt="Altres">
+        </button>
+      </div>
+      <div class="info">
+        <div></div>
+      </div>
+    </section>
   </main>
 </body>
+<script>
+  function printSomething() {
+    var item1 = document.getElementById('item1')
+    var item2 = document.getElementById('item2')
+    if (item1.style.display === "none") {
+      item1.style.display = "block";
+      item2.style.display = "none"
+    }
+    else {
+      item1.style.display = "none";
+      item2.style.display = "block"
+    }
+    console.log("Everything went great!");
+  }
+</script>
 </html>
