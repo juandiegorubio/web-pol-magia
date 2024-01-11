@@ -113,6 +113,7 @@ a { text-decoration: none; }
   margin: 50px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-gap: 10px;
   justify-content: center;
 }
@@ -136,11 +137,11 @@ a { text-decoration: none; }
   transition: filter .2s ease-in-out;
   filter: grayscale(60%);
   
-  &>img {
+  img {
     transition: scale .1s ease-in-out;
   }
   
-  &:hover {
+  &:hover, &:focus, &:active {
     filter: grayscale(0%);
     &>img {
       scale: 1.05;
@@ -154,37 +155,37 @@ a { text-decoration: none; }
   margin: 20px;
   z-index: 10;
 }
-.wrapper #qui-soc {
+.wrapper #button-qui-soc {
   grid-column: span 2;
   img {
     height: 100%;
   }
 }
-.wrapper #magia-prop {
+.wrapper #button-magia-prop {
   grid-column: span 4;
   img {
     width: 110%;
   }
 }
-.wrapper #magia-tothom {
+.wrapper #button-magia-tothom {
   grid-column: span 4;
   img {
     width: 110%;
   }
 }
-.wrapper #password {
+.wrapper #button-password {
   grid-column: span 2;
   img {
     width: 180%;
   }
 }
-.wrapper #disseny-personalitzat {
+.wrapper #button-disseny-personalitzat {
   grid-column: span 3;
   img {
     width: 110%;
   }
 }
-.wrapper #altres {
+.wrapper #button-altres {
   grid-column: span 3;
   background-color: #e4cb86;
 }
@@ -229,4 +230,13 @@ a { text-decoration: none; }
       width: auto;
     }
   }
+}
+
+#main-content .info {
+  display: none;
+}
+
+#main-content #qui-soc {
+  display: flex;
+  
 }
