@@ -3,6 +3,11 @@
   src: url('fonts/montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
 
+html {
+  display: flex;
+  align-items: center;
+}
+
 * {
   min-width: 0;
 }
@@ -10,7 +15,7 @@
 body {
   font-family: 'Montserrat';
   background-color: black;
-  margin: 0;
+  margin: 50px 15%;
   color: white;
 }
 h1 { font-size: 5em; }
@@ -27,8 +32,8 @@ a { text-decoration: none; }
   max-height: 100dvh;
 }
 
-#intro header {
-  position: absolute;
+#intro {
+  /* position: absolute; */
   top: 0;
   left: 0;
   width: 100%;
@@ -39,10 +44,10 @@ a { text-decoration: none; }
   align-items: center;
   z-index: 1000;
 }
-#intro header h1 {
+#intro h1 {
   font-weight: 600;
 }
-#intro header ol {
+#intro ol {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -50,7 +55,7 @@ a { text-decoration: none; }
   justify-content: center;
   gap: 100px;
 }
-#intro header ol > li {
+#intro ol > li {
   border-color: white;
   animation-name: fadein;
   animation-duration: 2s;
