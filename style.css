@@ -18,7 +18,7 @@ body {
   margin: 50px 15%;
   color: white;
 }
-h1 { font-size: 5em; }
+h1 { font-size: 4.5em; }
 h2 { font-size: 3.5em; }
 h3 { font-size: 2em; margin: 0; font-weight: 400;}
 p { font-size: 1.2em; }
@@ -26,14 +26,13 @@ a { text-decoration: none; }
 
 
 
-#intro {
+header {
   width: 100%;
   display: block;
   max-height: 100dvh;
 }
 
-#intro {
-  /* position: absolute; */
+header {
   top: 0;
   left: 0;
   width: 100%;
@@ -44,10 +43,23 @@ a { text-decoration: none; }
   align-items: center;
   z-index: 1000;
 }
-#intro h1 {
-  font-weight: 600;
+
+header .banner {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+
+  img {
+    /* width: 0; */
+    flex-grow: 1;
+  }
+  h1 {
+    flex-shrink: 0;
+    font-weight: 600;
+  }
 }
-#intro ol {
+header ol {
   list-style-type: none;
   padding: 0;
   margin: 0;
@@ -55,7 +67,7 @@ a { text-decoration: none; }
   justify-content: center;
   gap: 100px;
 }
-#intro ol > li {
+header ol > li {
   border-color: white;
   animation-name: fadein;
   animation-duration: 2s;
@@ -70,7 +82,7 @@ a { text-decoration: none; }
   }
 }
 
-#intro img {
+header img {
   display: flex;
   justify-content: center;
   max-width: 100%;
