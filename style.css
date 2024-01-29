@@ -98,199 +98,83 @@ a { text-decoration: none; }
   /* position: absolute; */
   width: 100%;
   /* height: 100vh; */
-  display: flex;
-  flex-direction: row-reverse;
+  display: block;
+  /* flex-direction: row-reverse; */
   /* align-items: center; */
   /* flex: 1 1 auto; */
 }
 
-#main-content .wrapper {
-  width: 50%;
-  margin: 50px;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-gap: 10px;
-  justify-content: center;
-}
-
-.wrapper .select-info {
-  box-sizing: border-box;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  border: 2px;
-  border-style: solid;
-  border-radius: 10px;
-  border-color: #e4cb86;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: white;
-  backdrop-filter: blur(10px);
-  transition: filter .2s ease-in-out;
-  filter: grayscale(60%);
-  background-size: auto 100%;
-  transition:
-    filter .3s ease-in-out,
-    background-size .3s ease-in-out;
-
-  img {
-    transition: scale .1s ease-in-out;
-  }
-
-  &:hover {
-    filter: grayscale(0%);
-    background-size: auto 110%;
-  }
-  &:focus, &:active {
-    filter: grayscale(0%);
-  }
-}
-
-.wrapper .select-info h3 {
-  position: absolute;
-  bottom: 0;
+.wrapper {
+  width: 100%;
   margin: 20px;
-  z-index: 10;
-}
-.wrapper #button-qui-soc {
-  grid-column: span 2;
-  img {
-    height: 100%;
-  }
-}
-.wrapper #button-magia-prop {
-  grid-column: span 4;
-  img {
-    width: 110%;
-  }
-}
-.wrapper #button-magia-tothom {
-  grid-column: span 4;
-  img {
-    width: 110%;
-  }
-}
-.wrapper #button-password {
-  grid-column: span 2;
-  img {
-    width: 180%;
-  }
-}
-.wrapper #button-disseny-personalitzat {
-  grid-column: span 3;
-  img {
-    width: 110%;
-  }
-}
-.wrapper #button-altres {
-  grid-column: span 3;
-  background-color: #e4cb86;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
 }
 
-#main-content .info-container {
-  margin: 50px;
-  width: 50%;
+strong {
+  font-weight: 700;
+  background: radial-gradient(circle, rgba(255,215,0,1) 0%, rgba(255,195,11,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-#main-content .info {
+.info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  overflow: hidden;
+  margin: 5px;
+  transition: all .3s ease-in-out;
+
   img {
-    height: 300px;
-    width: auto;
+    height: 400px;
+    object-fit:fill;
+    /* border: 1px solid gold; */
+    border-radius: 10px;
   }
-  .text {
-    /* height: calc(100% - 300px - 300px); */
+
+  h3 {
+    margin-top: 10px;
+    font-weight: bold;
     text-align: center;
-    margin: 20px;
+    text-wrap: pretty;
   }
+
   p {
-    /* margin: 10px 100px 10px 100px; */
-    text-align: center;
-    font-size: 1.2em;
+    /* margin: 0px; */
+    /* height: 20px; */
+    /* margin: 5px 0; */
+    text-wrap: pretty;
   }
+
+
+
   .slider {
-    box-sizing: border-box;
-    /* background-color: red; */
-    width: 100%;
-    height: 300px;
-    /* padding: 30px; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    button {
-      width: 100px;
-      height: 100%;
+    height: 0px;
+  }
+}
+
+.wrapper .info {
+  width: 0px;
+  flex-grow: 1;
+
+  strong {
+    font-weight: normal;
+  }
+
+  &:hover {
+    width: 20%;
+    p {
+      margin: 1em;
+      height: auto;
     }
-    img {
-      height: 100%;
-      width: auto;
-    }
-  }
-}
-
-#main-content .info {
-  display: none;
-}
-
-#main-content #qui-soc {
-  display: flex;
-
-}
-
-@media (max-width: 1300px) {
-  h1 {
-    font-size: 3.5em;
-    margin: 0;
-  }
-  h3 {
-    font-size: 1.5em;
-    margin: 0;
-  }
-  p {
-    font-size: 1em;
-  }
-}
-
-
-@media (max-width: 900px) {
-  #intro header {
-    /* position: relative; */
-  }
-  h1 {
-    font-size: 1.5em;
-    margin: 0;
-  }
-  h3 {
-    font-size: 1em;
-    margin: 0;
-  }
-  p {
-    font-size: 0.75em;
-  }
-  #intro header ol {
-    display: block;
-  }
-
-  #main-content {
-    display: block;
-  }
-
-  #main-content .info-container {
-    margin: 10px; 
-    width: auto;
-  }
-  #main-content .wrapper {
-    margin: 10px; 
-    width: auto;
-    .select-info {
-      height: 200px;
+    strong {
+      font-weight: 700;
     }
   }
+
+
 }
+
+
