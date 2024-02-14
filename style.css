@@ -25,6 +25,10 @@ h3 { font-size: 2em; margin: 0; font-weight: 400;}
 p { font-size: 1.2em; }
 a { text-decoration: none; }
 
+img {
+  max-width: 100%;
+}
+
 header {
   top: 0;
   left: 0;
@@ -143,7 +147,7 @@ strong {
   overflow: hidden;
   margin: 5px 0;
   img {
-    height: 400px;
+    /* height: 400px; */
     object-fit:fill;
     /* border: 1px solid gold; */
     border-radius: 10px;
